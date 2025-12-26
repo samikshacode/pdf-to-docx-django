@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF to Word Converter</title>
+</head>
+<body>
+
+<h2>Upload PDF File</h2>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="pdf" required>
+    <button type="submit">Convert</button>
+</form>
+
+{% if download %}
+    <p>Conversion successful!</p>
+    <a href="/media/output.docx">Download Word File</a>
+{% endif %}
+
+</body>
+</html>

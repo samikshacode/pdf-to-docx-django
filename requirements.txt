@@ -1,0 +1,4 @@
+Django
+gunicorn
+pdf2docx
+python-docx
